@@ -1,18 +1,18 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class="top-page-header">
   <div class="main-header">
-    <%= link_to 'アプリ名', "#", class: "app-title" %>
+    <%= link_to 'アプリ名', root_path, class: "app-title" %>
     <ul class='lists-left'>
       <li><%= link_to '新規タスク作成', "#", class: "new-task" %></li>
     </ul>
     <ul class='lists-right'>
-      <%# if user_signed_in? %>
-      <%#<li><%= link_to 'ユーザー名', "#", class: "user-nickname" %></li>
-      <%#<li><%= link_to "ログアウト", "#", method: :delete, class: "logout" %></li> 
-      <%# else %>
-      <li><%= link_to 'ログイン', "#", class: "login" %></li>
-      <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
-      <%# end %>
+      <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, edit_user_path(current_user), class: "user-nickname" %></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li> 
+      <% else %>
+      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
     </ul>
   </div>
 </header>
