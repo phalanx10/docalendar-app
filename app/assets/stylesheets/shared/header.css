@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header{
+  width: 100%;
+  height: 100px;
+  background-color: #253141;
+}
+
+.main-header{
+  width: 100%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.app-title{
+  padding-left: 10px;
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.new-task{
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.lists-right {
+  padding-right: 10px;
+  list-style: none;
+}
+
+.login{
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.sign-up{
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.user-nickname{
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.logout{
+  text-decoration: none;
+  color: #fafafa;
+}
