@@ -1,0 +1,17 @@
+<%= render "shared/header"%>
+
+<div class="main-index">
+  <div class="card__wrapper">
+    <div class="card">
+      <div class="card__body">
+        <h2 class="card__title"><%= @task.title %></h2>
+        <p class="card__summary"><%= @task.description %></p>
+        <p class="card__summary">開始日 <%= @task.start_time %></p>
+        <p class="card__summary">終了日 <%= @task.end_time %></p>
+        <p class="card__summary"><%= @task.priority.name %></p>
+        <p class="card__summary"><%= @task.category.name %></p>
+        <%= link_to "編集", edit_task_path(@task.id) %>
+      </div>
+    </div>
+  </div>
+</div>

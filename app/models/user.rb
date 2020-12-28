@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'is invalid. Set including both letters and numbers.' }
+
+  has_many :tasks
 end

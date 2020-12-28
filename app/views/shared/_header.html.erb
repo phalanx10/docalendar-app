@@ -3,11 +3,11 @@
   <div class="main-header">
     <%= link_to 'アプリ名', root_path, class: "app-title" %>
     <ul class='lists-left'>
-      <li><%= link_to '新規タスク作成', "#", class: "new-task" %></li>
+      <li><%= link_to '新規タスク作成', new_task_path, class: "new-task" %></li>
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, edit_user_path(current_user), class: "user-nickname" %></li>
+      <li><%= link_to current_user.nickname, user_path(current_user), class: "user-nickname" %></li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li> 
       <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
