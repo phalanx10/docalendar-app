@@ -13,11 +13,12 @@
 
 ## tasks テーブル
 
-| Column      | Type       | Options                        |
+Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| title       | string     | null: false, unique: true      |
+| title       | string     | null: false                    |
 | description | text       | null: false                    |
-| schedule    | date       | null: false                    |
+| start_time  | date       | null: false                    |
+| end_time    | date       | null: false                    |
 | category_id | integer    | null: false                    | Active hash
 | priority_id | integer    | null: false                    | Active hash
 | user        | references | null: false, foreign_key: true |

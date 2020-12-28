@@ -1,39 +1,32 @@
 <%= render "shared/header"%>
 
 <div class="main-index">
+  
   <div class="main-task">
-    <div class="card-75">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">詳細</a>
-        <a href="#" class="btn btn-primary">編集</a>
-        <a href="#" class="btn btn-primary">削除</a>
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+    <div class="card__wrapper">
+    <% @tasks.each do |task| %>
+      <div class="card">
+        <div class="card__body">
+          <h2 class="card__title"><%= task.title %></h2>
+          <p class="card__summary"><%= task.description %></p>
+          <p class="card__summary">開始日 <%= task.start_time %></p>
+          <p class="card__summary">終了日 <%= task.end_time %></p>
+          <p class="card__summary"><%= task.priority.name %></p>
+          <p class="card__summary"><%= task.category.name %></p>
+          <div class="card_btn">
+            <%= link_to "詳細", "#" %>
+            <%= link_to "編集", "#" %>
+            <%= link_to "削除", task_path(task.id), method: :delete %>
+          </div>
+        </div>
       </div>
+    <% end %>
     </div>
-
-    <div class="card-75">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">詳細</a>
-        <a href="#" class="btn btn-primary">編集</a>
-        <a href="#" class="btn btn-primary">削除</a>
-      </div>
-    </div>
-
-    <div class="card-75">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">詳細</a>
-        <a href="#" class="btn btn-primary">編集</a>
-        <a href="#" class="btn btn-primary">削除</a>
-      </div>
-    </div>
-
-  </div>
-  <div class="search_bar">
-  <%= render "shared/side_bar"%>
   </div>
 </div>
