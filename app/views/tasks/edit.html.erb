@@ -2,7 +2,7 @@
 
 <div class="contents row">
   <div class="container">
-    <h3>新規タスク</h3>
+    <h3>編集する</h3>
     <%= form_with(model: @task, local: true) do |form| %>
       <%= form.text_field :title, placeholder: "タスク名" %>
 
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-      <%= form.submit "タスク作成" %>
+      <%= form.submit "更新" %>
     <% end %>
   </div>
 </div>

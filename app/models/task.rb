@@ -14,4 +14,12 @@ class Task < ApplicationRecord
     validates :priority_id, numericality: { other_than: 1 }
     validates :user_id
   end
+
+  def self.search(search)
+    if search != ""
+      Task.where('title LIKE(?)', "%#{search}%")
+    else
+      Task.all
+    end
+  end
 end
