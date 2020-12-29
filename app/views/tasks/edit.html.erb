@@ -1,20 +1,21 @@
 <%= render "shared/header"%>
+<div class="main-index">
+  <div class="contents-row">
+    <div class="container">
+      <%= form_with(model: @task, local: true) do |form| %>
+      <div class="title-area">
+        <%= form.text_field :title, placeholder: "タスク名" %>
+      </div>
+      <div class="desc-area">
+        <%= form.text_area :description, placeholder: "タスク内容" %>
+      </div>
+      <div class="form-group">
+      <div class='form-text-wrap'>
+        <label class="form-text">Start date</label>
+      </div>
 
-<div class="contents row">
-  <div class="container">
-    <h3>編集する</h3>
-    <%= form_with(model: @task, local: true) do |form| %>
-      <%= form.text_field :title, placeholder: "タスク名" %>
-
-      <%= form.text_area :description, placeholder: "タスク内容" %>
-
-     <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">Start date</label>
-    </div>
-
-    <div class='input-wrap'>
-      <%= raw sprintf(
+      <div class='input-wrap'>
+        <%= raw sprintf(
                   form.date_select(
                     :start_time,
                     class:'select-start',
@@ -25,14 +26,14 @@
                     end_year: (Time.now.year + 5),
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
+      </div>
 
-    <div class='form-text-wrap'>
-      <label class="form-text">End date</label>
-    </div>
+      <div class='form-text-wrap'>
+        <label class="form-text">End date</label>
+      </div>
 
-    <div class='input-wrap'>
-      <%= raw sprintf(
+      <div class='input-wrap'>
+        <%= raw sprintf(
                   form.date_select(
                     :end_time,
                     class:'select-start',
@@ -43,23 +44,24 @@
                     end_year: (Time.now.year + 5),
                     date_separator: '%s'),
                   "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
-
-    <div class="items-detail">
-      <div class="weight-bold-text"></div>
-      <div class="form">
-        <div class="weight-bold-text">
-          カテゴリー
-        </div>
-        <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"task-category"}) %>
-        <div class="weight-bold-text">
-          優先度
-        </div>
-        <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>
       </div>
-    </div>
 
-      <%= form.submit "更新" %>
-    <% end %>
+      <div class="items-detail">
+        <div class="weight-bold-text"></div>
+        <div class="form">
+          <div class="weight-bold-text">
+            カテゴリー
+          </div>
+          <%= form.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"task-category"}) %>
+          <div class="weight-bold-text">
+            優先度
+          </div>
+          <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>
+        </div>
+      </div>
+
+        <%= form.submit "更新" %>
+      <% end %>
+    </div>
   </div>
 </div>

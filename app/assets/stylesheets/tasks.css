@@ -3,6 +3,12 @@
 }
 
 .main-index{
+  background-size: cover;
+  background-image: url("/images/test1.png");
+  height: calc(100vh - 100px);
+}
+
+.main-task{
   width: 1024px;
   height: calc(100vh - 100px);
   margin: 0 auto;
@@ -52,4 +58,23 @@
 .input-wrap p {
   line-height: 60px;
   padding: 0 5px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.title-area{
+  padding-top: 10px;
+}
+
+.desc-area{
+  padding-top: 10px;
+}
+
+.contents-row{
+  background-color: white;
+  width: 500px;
+  margin: 0 auto;
 }
