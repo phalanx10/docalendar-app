@@ -44,6 +44,7 @@ class TasksController < ApplicationController
   end
 
   private
+
   def task_params
     params.require(:task).permit(:title, :description, :start_time, :end_time, :category_id, :priority_id).merge(user_id: current_user.id)
   end
@@ -55,5 +56,4 @@ class TasksController < ApplicationController
   def move_to_signin
     authenticate_user! unless user_signed_in?
   end
-
 end
