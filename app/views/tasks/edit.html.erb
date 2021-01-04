@@ -15,17 +15,7 @@
       </div>
 
       <div class='input-wrap'>
-        <%= raw sprintf(
-                  form.date_select(
-                    :start_time,
-                    class:'select-start',
-                    id:"start-date",
-                    use_month_numbers: true,
-                    prompt:'--',
-                    start_year: 2020,
-                    end_year: (Time.now.year + 5),
-                    date_separator: '%s'),
-                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        <%= form.datetime_select :start_time, :use_month_numbers => true %>
       </div>
 
       <div class='form-text-wrap'>
@@ -33,17 +23,7 @@
       </div>
 
       <div class='input-wrap'>
-        <%= raw sprintf(
-                  form.date_select(
-                    :end_time,
-                    class:'select-start',
-                    id:"start-date",
-                    use_month_numbers: true,
-                    prompt:'--',
-                    start_year: 2020,
-                    end_year: (Time.now.year + 5),
-                    date_separator: '%s'),
-                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        <%= form.datetime_select :end_time, :use_month_numbers => true %>
       </div>
 
       <div class="items-detail">
