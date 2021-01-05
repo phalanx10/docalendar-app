@@ -1,0 +1,13 @@
+<div class="card__body">
+  <h2 class="card__title"><%= task.title %></h2>
+  <p class="card__summary"><%= task.description %></p>
+  <p class="card__summary">開始日 <%= task.start_time.strftime("%Y-%m-%d %H:%M") %></p>
+  <p class="card__summary">終了日 <%= task.end_time.strftime("%Y-%m-%d %H:%M") %></p>
+  <p class="card__summary"><%= task.priority.name %></p>
+  <p class="card__summary"><%= task.category.name %></p>
+  <div class="card_btn">
+    <%= link_to "詳細", task_path(task.id) %>
+    <%= link_to "編集", edit_task_path(task.id) %>
+    <%= link_to "削除", task_path(task.id), method: :delete %>
+  </div>
+</div>

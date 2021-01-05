@@ -27,22 +27,30 @@
       <% end %>
     </nav>
     <div class="card__wrapper">
+
     <% @tasks.each do |task| %>
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title"><%= task.title %></h2>
-          <p class="card__summary"><%= task.description %></p>
-          <p class="card__summary">開始日 <%= task.start_time.strftime("%Y-%m-%d %H:%M") %></p>
-          <p class="card__summary">終了日 <%= task.end_time.strftime("%Y-%m-%d %H:%M") %></p>
-          <p class="card__summary"><%= task.priority.name %></p>
-          <p class="card__summary"><%= task.category.name %></p>
-          <div class="card_btn">
-            <%= link_to "詳細", task_path(task.id) %>
-            <%= link_to "編集", edit_task_path(task.id) %>
-            <%= link_to "削除", task_path(task.id), method: :delete %>
-          </div>
-        </div>
+    
+      <% if task.priority_id == 2 %>
+      <div class="card_priority">
+        <%= render partial: "shared/card", locals: { task: task } %>
       </div>
+
+      <% elsif task.priority_id == 3 %>
+      <div class="card_high">
+        <%= render partial: "shared/card", locals: { task: task } %>
+      </div>
+
+      <% elsif task.priority_id == 4 %>
+      <div class="card_middle">
+        <%= render partial: "shared/card", locals: { task: task } %>
+      </div>
+
+      <% else task.priority_id == 5 %>
+      <div class="card_low">
+        <%= render partial: "shared/card", locals: { task: task } %>
+      </div>
+
+      <% end %>
     <% end %>
     </div>
   </div>
