@@ -4,8 +4,7 @@
 
 .main-index{
   background-size: cover;
-
-  height: calc(100vh - 100px);
+  padding-top: 100px;
 }
 
 .main-task{
@@ -19,9 +18,28 @@
   justify-content: space-between;
   align-items: center;
 }
-.card {
+.card_priority {
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
+  background-color: red;
+}
+
+.card_high{
+  width: calc((100% - 50px) / 3);
+  margin-top: 10px;
+  background-color: yellow;
+}
+
+.card_middle{
+  width: calc((100% - 50px) / 3);
+  margin-top: 10px;
+  background-color: green;
+}
+
+.card_low{
+  width: calc((100% - 50px) / 3);
+  margin-top: 10px;
+  background-color: grey;
 }
 
 .card__body{
