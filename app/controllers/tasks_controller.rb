@@ -1,9 +1,12 @@
 class TasksController < ApplicationController
   before_action :move_to_signin
   before_action :set_task, only: [:destroy, :edit, :update, :show]
+  before_action :move_to_index, except: [:new, :index, :create]
 
   def index
-    @tasks = Task.all.order('created_at DESC')
+    @q = Task.ransack(params[:q])
+    @tasks = @q.result(distinct: true)
+    @task = current_user.tasks
   end
 
   def new
@@ -39,10 +42,6 @@ class TasksController < ApplicationController
   def show
   end
 
-  def search
-    @tasks = Task.search(params[:keyword])
-  end
-
   private
 
   def task_params
@@ -55,5 +54,9 @@ class TasksController < ApplicationController
 
   def move_to_signin
     authenticate_user! unless user_signed_in?
+  end
+
+  def move_to_index
+    redirect_to action: :index unless current_user.id == @task.user.id
   end
 end
