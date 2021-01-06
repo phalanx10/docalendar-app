@@ -2,13 +2,13 @@
 
 <div class="main-index">
 
-  <input id="t" type="radio" name="tab_item" checked>
-  <label class="tab_item" for="t">タスク一覧</label>
   <input id="c" type="radio" name="tab_item" checked>
   <label class="tab_item" for="c">カレンダー</label>
+  <input id="t" type="radio" name="tab_item" checked>
+  <label class="tab_item" for="t">タスク一覧</label>
   
   <div class="tab_content" id="calendars">
-    <%= month_calendar events: @tasks do |date, tasks| %>
+    <%= month_calendar events: @task do |date, tasks| %>
     <%= date.day %>
       <% tasks.each do |task| %>
         <div>
@@ -21,15 +21,24 @@
   <div class="tab_content" id="tasks">
   <div class="main-task">
     <nav class="navbar navbar-light bg-light">
-      <%= form_with(url: search_tasks_path, local: true, method: :get, class: "form-inline") do |form| %>
-        <%= form.text_field :keyword, placeholder: "タイトルで検索する", class: "form-control mr-sm-2" %>
-        <%= form.submit "検索", class: "search-btn" %>
+      <%= search_form_for @q do |f| %>
+        <%= f.label :name, "タイトル検索" %>
+        <%= f.search_field :title_cont %>
+
+        <%= f.label :"優先度" %>
+        <%= f.radio_button :priority_id_eq, '', {:checked => true} %>指定なし
+        <%= f.radio_button :priority_id_eq, 2 %>最優先
+        <%= f.radio_button :priority_id_eq, 3 %>高
+        <%= f.radio_button :priority_id_eq, 4 %>中
+        <%= f.radio_button :priority_id_eq, 5 %>低
+
+        <%= f.submit "検索" %>
       <% end %>
     </nav>
     <div class="card__wrapper">
-
-    <% @tasks.each do |task| %>
     
+    <% @tasks.each do |task| %>
+    <% if current_user.id == task.user.id %>
       <% if task.priority_id == 2 %>
       <div class="card_priority">
         <%= render partial: "shared/card", locals: { task: task } %>
@@ -51,6 +60,7 @@
       </div>
 
       <% end %>
+    <% end %>
     <% end %>
     </div>
   </div>
