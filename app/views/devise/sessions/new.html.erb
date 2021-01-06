@@ -1,4 +1,5 @@
-<h2>Log in</h2>
+<%= render "shared/header"%>
+<div class="devise-index">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -23,5 +24,6 @@
     <%= f.submit "Log in" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
