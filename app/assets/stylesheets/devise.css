@@ -10,16 +10,32 @@
   justify-content: center;
   align-items: center;
 }
-
+/*新規ユーザー登録用*/
 .account-page .account-page__inner {
-  width: 980px;
-  margin: 60px auto;
-  padding: 60px;
-  border-radius: 5px;
+  position: relative;
+  margin: 2em auto;
+  padding: 1.2em;
+  color: #555555; /* 文章色 */
+  background-color: #fff; /* 背景色 */
+  border: 1px solid #555555; /* 枠線の太さ・色 */
+  width: 150%;
+  height: 600px;
 }
+
+/*ユーザーログイン用*/
+.account-page .account-page__inner-a {
+  position: relative;
+  margin: 2em auto;
+  padding: 1.2em;
+  color: #555555; /* 文章色 */
+  background-color: #fff; /* 背景色 */
+  border: 1px solid #555555; /* 枠線の太さ・色 */
+  width: 150%;
+  height: 400px;
+}
+
 .account-page .account-page__inner .account-page__inner--left, .account-page .account-page__inner .account-page__inner--right {
-  float: left;
-  width: 50%;
+  float: inline-start;
 }
 .account-page .account-page__inner:after {
   clear: both;
@@ -27,18 +43,15 @@
   display: block;
 }
 .account-page .account-page__header h2 {
-  margin-bottom: 10px;
-  letter-spacing: 3px;
-  font-size: 40px;
-  font-weight: 200;
+  position: absolute;
+  padding: 0 .5em;
+  left: 20px;
+  top: -15px;
+  font-weight: bold;
+  background-color: #fff; /* タイトル背景色 */
+  color: #555555; /* タイトル文字色 */
 }
-.account-page .account-page__header h2:after {
-  content: "";
-  display: block;
-  width: 60px;
-  margin-top: 5px;
-  border-bottom: 1px solid #38aef0;
-}
+
 .account-page .account-page__header h5 {
   margin-bottom: 20px;
   font-size: 14px;
@@ -110,7 +123,7 @@
 
 .test-button {
   display: inline-block;
-  padding: 0.7em 1.6em;
+  padding: 0.7em 1.8em;
   font-size: 1em;
   color: #fff;
   text-decoration: none;
@@ -122,4 +135,6 @@
   transition: 0.2s ease;
   height: 50px;
   margin-top: 19px;
+  margin-left: 10px;
+  width: 200px;
 }

@@ -3,20 +3,18 @@
 <div class="main-index">
   <div class="main-task">
     <div class="card__wrapper">
-      <div class="card">
-        <div class="card__body">
-          <h2 class="card__title"><%= @task.title %></h2>
-          <p class="card__summary"><%= @task.description %></p>
-          <p class="card__summary">予定日 <%= @task.start_time %></p>
-          <p class="card__summary"><%= @task.priority.name %></p>
-          <p class="card__summary"><%= @task.category.name %></p>
-          <div class="btn-list">
-            <div class="index-name">
-              <%= link_to "編集", edit_task_path(@task.id), class:"button" %>
-            </div>
-            <div class="index-name">
-              <%= link_to "削除", task_path(@task.id), method: :delete, class:"button" %>
-            </div>
+      <div class="kakomi-tape2">
+        <h2 class="show_title"><%= @task.title %></h2>
+        <p class="show_summary"><%= @task.description %></p>
+        <p class="show_summary">予定日 <%= @task.start_time %></p>
+        <p class="show_summary"><%= @task.priority.name %></p>
+        <p class="show_summary"><%= @task.category.name %></p>
+        <div class="btn-list">
+          <div class="index-name">
+            <%= link_to "編集", edit_task_path(@task.id), class:"button" %>
+          </div>
+          <div class="index-name">
+            <%= link_to "削除", task_path(@task.id), method: :delete, class:"button" %>
           </div>
         </div>
       </div>
