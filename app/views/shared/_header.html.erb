@@ -1,13 +1,13 @@
 <%# CSS・・・assets/stylesheets/shared/header.css %>
 <header class="top-page-header">
   <div class="main-header">
-    <%= link_to 'アプリ名', root_path, class: "app-title" %>
+    <%= link_to 'DoCalendar', root_path, class: "app-title" %>
     <ul class='lists-left'>
       <li><%= link_to '新規タスク作成', new_task_path, class: "new-task" %></li>
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, edit_user_registration_path, class: "user-nickname" %></li>
+      <li><div class="user-name"><%= current_user.nickname %></div></li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li> 
       <% else %>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
