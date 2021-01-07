@@ -24,10 +24,9 @@ class User < ApplicationRecord
   has_one_attached :image
 
   def self.guest
-    find_or_create_by(email: "test1@test.com") do |user|
-      user.nickname = ENV["TEST_ACCOUNT_NICKNAME"]
-      user.password = ENV["TEST_ACCOUNT_PASSWORD"]
+    find_or_create_by(email: 'test1@test.com') do |user|
+      user.nickname = ENV['TEST_ACCOUNT_NICKNAME']
+      user.password = ENV['TEST_ACCOUNT_PASSWORD']
     end
   end
-
 end
