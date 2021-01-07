@@ -9,9 +9,6 @@
   .wday-5 {}
   .wday-6 {}
 
-  .today {
-    background-color: aqua;
-  }
   .past {}
   .future {}
 
@@ -19,9 +16,15 @@
 
   .prev-month {}
   .next-month { }
-  .current-month {}
+  .current-month {
+    background-color: #ffffff;
+  }
 
   .has-events {
     background-color: aquamarine;
+  }
+
+  .today {
+    background-color: aqua;
   }
 }
