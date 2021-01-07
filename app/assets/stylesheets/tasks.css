@@ -3,8 +3,13 @@
 }
 
 .main-index{
-  background-size: cover;
   padding-top: 100px;
+  height: 100vh;
+  background-color: #fff;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
 }
 
 .main-task{
@@ -18,28 +23,34 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.card{
+  width: calc((100% - 50px)/3);
+  margin: 120px auto;
+}
+
 .card_priority {
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.747);
 }
 
 .card_high{
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.74);
 }
 
 .card_middle{
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.74);
 }
 
 .card_low{
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.733);
 }
 
 .card__body{
@@ -77,11 +88,6 @@
   padding: 0 5px;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-}
-
 .title-area{
   padding-top: 10px;
 }
@@ -89,14 +95,6 @@
 .desc-area{
   padding-top: 10px;
 }
-
-.contents-row{
-  background-color: white;
-  width: 500px;
-  margin: 0 auto;
-}
-
-
 
 /*タブ切り替え全体のスタイル*/
 .tabs {
@@ -170,4 +168,9 @@ input[name="tab_item"] {
   background: #fff;
   font-size: 12px;
   cursor: pointer;
+}
+
+input[type="search"] {
+  padding: 3px;
+  width: 250px;
 }
