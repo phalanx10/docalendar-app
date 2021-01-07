@@ -5,7 +5,6 @@
     <div class='account-page__inner clearfix'>
       <div class='account-page__inner--left account-page__header'>
         <h2>Log in</h2>
-        <h5>登録しているユーザーでログイン</h5>
         <%= render "devise/shared/links"%>
       </div>
       <div class='account-page__inner--right user-form'>
@@ -26,8 +25,11 @@
                 <%= f.password_field :password, autocomplete: "off"%>
               </div>
             </div>
-            <div class='actions'>
-              <%= f.submit "Log in", class: 'btn'%>
+            <div class="d-btn-list">
+              <div class='actions'>
+                <%= f.submit "Log in", class: 'btn'%>
+              </div>
+              <%= link_to 'Log in for TestUser', users_guest_sign_in_path, method: :post, class:"test-button" %>
             </div>
           </div>
         <% end %>
