@@ -2,9 +2,9 @@
 <header class="top-page-header">
   <div class="main-header">
     <%= link_to 'DoCalendar', root_path, class: "app-title" %>
-    <ul class='lists-left'>
-      <li><%= link_to '新規タスク作成', new_task_path, class: "new-task" %></li>
-    </ul>
+    <div class='lists-left'>
+      <%= link_to '新規タスク作成', new_task_path, class: "new-task" %>
+    </div>
     <ul class='lists-right'>
       <% if user_signed_in? %>
       <li><div class="user-name"><%= current_user.nickname %></div></li>
