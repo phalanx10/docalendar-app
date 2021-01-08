@@ -29,7 +29,7 @@ DoCalendarとはタスクカードとカレンダーを使用したToDo管理ア
 ##メイン機能
 登録したユーザーは、タスクの作成・編集が行えます。
 
-[![Image from Gyazo](https://i.gyazo.com/b139fb960cb87ab1fec355e7258e8bbb.gif)](https://gyazo.com/b139fb960cb87ab1fec355e7258e8bbb)
+<a href="https://gyazo.com/b139fb960cb87ab1fec355e7258e8bbb"><video alt="Video from Gyazo" width="1000" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/b139fb960cb87ab1fec355e7258e8bbb.mp4" type="video/mp4" /></video></a>
 
 DoCalendarのER図
 
