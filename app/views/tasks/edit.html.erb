@@ -1,7 +1,7 @@
 <%= render "shared/header"%>
 <div class="main-index">
   <div class="main-task">
-    <h1>新規タスク作成</h1>
+    <h1>タスク変更</h1>
     <%= form_with(model: @task, local: true) do |form| %>
 
       <div class="title-area">
@@ -29,7 +29,7 @@
           <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}, {class:"select-box", id:"task-priority"}) %>
         </div>
       </div>
-      <%= form.submit "タスク作成" %>
+      <%= form.submit "保存" %>
     <% end %>
   </div>
 </div>
