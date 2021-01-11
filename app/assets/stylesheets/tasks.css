@@ -6,15 +6,24 @@
   padding-top: 100px;
   height: 100vh;
   background-color: #fff;
-  background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
-  background-size: 100% 1.2em;
+  background-image:url('Woodland-Camo.png');
+  background-size: 100%;
 }
 
 .main-task{
   width: 1024px;
   margin: 0 auto;
+  color: #fff;
+}
+
+.form-task {
+  position: relative;
+  margin: 2em auto;
+  padding: 1.2em;
+  color: #555555; /* 文章色 */
+  background-color: #fff; /* 背景色 */
+  border: 1px solid #555555; /* 枠線の太さ・色 */
+  width: 50%;
 }
 
 .card__wrapper {
@@ -207,4 +216,8 @@ input[type="search"] {
   background-color: rgba(204, 186, 136,0.3);/*テープ色*/
   box-shadow: 0 0 3px rgba(0,0,0,0.1);
   transform: rotate( -3deg ); /*テープ角度*/
+ }
+
+ .navbar-light{
+   background-color: gray;
  }

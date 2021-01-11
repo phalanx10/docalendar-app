@@ -3,10 +3,8 @@
   padding-right: 150px;
   height: 100vh;
   background-color: #fff;
-  background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
-  background-size: 100% 1.2em;
+  background-image: url('Woodland-Camo.png');
+  background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
