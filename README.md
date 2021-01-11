@@ -1,11 +1,12 @@
 ## DoCalendar
+[![Image from Gyazo](https://i.gyazo.com/70afbb0f9a31bc2c0f75dd64851f5d93.jpg)](https://gyazo.com/70afbb0f9a31bc2c0f75dd64851f5d93)
 URL: https://docalendar-phalanx.herokuapp.com
 
 Basic認証: ユーザー名: admin
           パスワード: 2222
 
 ## 概要
-DoCalendarとはタスクカードとカレンダーを使用したToDo管理アプリケーションサービスです。
+DoCalendarとはタスクカードとカレンダーを使用したサバイバルゲームのためのToDoアプリケーションサービスです。
 
 ## 使用技術
 - フレームワーク：Rails6.0.0
@@ -17,6 +18,7 @@ DoCalendarとはタスクカードとカレンダーを使用したToDo管理ア
 - デプロイ環境：heroku
 - ユーザー管理：devise
 - 検索絞込み機能：ransak
+- 画像保存： Active_Storage
 - カレンダー機能: simple_calendar
 - 使用マシン：Mac Catalina(10.15.7)
 - 開発期間（約 3 週間）
@@ -25,20 +27,23 @@ DoCalendarとはタスクカードとカレンダーを使用したToDo管理ア
 
 予定管理の観点から
 - タスクだけのToDoアプリだと長期的な予定を管理するのが大変という課題への解決。
-- 時間に追われていて緊急性があるタスクかどうかを視覚的に瞬時に見分ける必要があるという課題への解決。
+- 重要なタスクかどうかを視覚的に瞬時に見分ける必要があるという課題への解決。
+
+サバイバルゲームの観点から
+- カスタムや修理の受取日などサバイバルゲーム特有の予定が一般のToDoアプリのカテゴリーに存在しないという課題への解決
 
 ## メイン機能
 
 登録したユーザーは、タスクの作成・編集が行えます。
 
-[![Image from Gyazo](https://i.gyazo.com/b139fb960cb87ab1fec355e7258e8bbb.gif)](https://gyazo.com/b139fb960cb87ab1fec355e7258e8bbb)
+[![Image from Gyazo](https://i.gyazo.com/28520b046247648b80b7b9b6fcf5758b.gif)](https://gyazo.com/28520b046247648b80b7b9b6fcf5758b)
 
 
 タブから今月のカレンダーを見ることができます。
 
 - 当日は水色で、予定の入っている日は緑色で表示されます。
 
-[![Image from Gyazo](https://i.gyazo.com/7518bde7627891c0c6a8945f22218b5d.gif)](https://gyazo.com/7518bde7627891c0c6a8945f22218b5d)
+[![Image from Gyazo](https://i.gyazo.com/f878644e707a4ab4c70fe66d805cd501.jpg)](https://gyazo.com/f878644e707a4ab4c70fe66d805cd501)
 
 ## サブ機能
 
@@ -54,6 +59,8 @@ DoCalendarとはタスクカードとカレンダーを使用したToDo管理ア
 - タスクコメント機能(予定を共有するユーザー同士が疎通するための機能)
 
 ## こだわった点
+
+[![Image from Gyazo](https://i.gyazo.com/6bfb106fce387d81eeeea409541f7e86.jpg)](https://gyazo.com/6bfb106fce387d81eeeea409541f7e86)
 
 - 優先度によってタスクの色が変更される点
 - タブ機能を採用しカレンダーとタスクの確認を容易にした点
