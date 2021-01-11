@@ -4,7 +4,7 @@
 
 .main-index{
   padding-top: 100px;
-  background-image:url('Woodland-Camo.png');
+  background-image: image-url("Woodland-Camo.png");
 }
 
 .main-task{
