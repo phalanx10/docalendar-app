@@ -1,6 +1,6 @@
 ## DoCalendar
 [![Image from Gyazo](https://i.gyazo.com/70afbb0f9a31bc2c0f75dd64851f5d93.jpg)](https://gyazo.com/70afbb0f9a31bc2c0f75dd64851f5d93)
-URL: https://docalendar-phalanx.herokuapp.com
+URL: https://docalendar-app.herokuapp.com
 
 Basic認証: ユーザー名: admin
           パスワード: 2222
@@ -36,7 +36,7 @@ DoCalendarとはタスクカードとカレンダーを使用したサバイバ�
 
 登録したユーザーは、タスクの作成・編集が行えます。
 
-[![Image from Gyazo](https://i.gyazo.com/28520b046247648b80b7b9b6fcf5758b.gif)](https://gyazo.com/28520b046247648b80b7b9b6fcf5758b)
+[![Image from Gyazo](https://i.gyazo.com/c37d67d7768db3e41e3795ab7855095d.gif)](https://gyazo.com/c37d67d7768db3e41e3795ab7855095d)
 
 
 タブから今月のカレンダーを見ることができます。
