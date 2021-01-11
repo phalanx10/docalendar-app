@@ -3,7 +3,7 @@
   padding-right: 150px;
   height: 100vh;
   background-color: #fff;
-  background-image: image-url("Woodland-Camo.png");
+  background-image: url("Woodland-Camo.png");
   background-size: 100%;
   display: flex;
   justify-content: center;
