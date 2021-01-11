@@ -4,16 +4,14 @@
 
 .main-index{
   padding-top: 100px;
-  height: 100vh;
-  background-color: #fff;
   background-image:url('Woodland-Camo.png');
-  background-size: 100%;
 }
 
 .main-task{
   width: 1024px;
   margin: 0 auto;
   color: #fff;
+  height: calc(100vh - 100px);
 }
 
 .form-task {
@@ -41,7 +39,7 @@
 .card_priority {
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: rgba(255, 0, 0, 0.747);
+  background-color: rgba(255, 0, 0, 0.808);
 }
 
 .card_high{
@@ -53,17 +51,18 @@
 .card_middle{
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: rgba(0, 128, 0, 0.74);
+  background-color: rgba(0, 128, 0, 0.774);
 }
 
 .card_low{
   width: calc((100% - 50px) / 3);
   margin-top: 10px;
-  background-color: rgba(128, 128, 128, 0.733);
+  background-color: rgba(128, 128, 128, 0.781);
 }
 
 .card__body{
   padding-left: 10px;
+  color: black;
 }
 
 .card__summary {
@@ -142,7 +141,7 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
-  padding: 40px 40px 0;
+  padding: 55px 40px 0;
   clear: both;
   overflow: hidden;
 }
@@ -220,4 +219,8 @@ input[type="search"] {
 
  .navbar-light{
    background-color: gray;
+ }
+
+ html{
+  background-image:url('Woodland-Camo.png');
  }

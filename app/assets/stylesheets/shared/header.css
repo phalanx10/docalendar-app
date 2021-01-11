@@ -4,9 +4,9 @@
 
 .top-page-header{
   width: 100%;
-  height: 100px;
   position: fixed;
   border: solid 1px black;
+  background-color: darkolivegreen;
 }
 
 .main-header{
