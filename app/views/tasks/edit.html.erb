@@ -1,7 +1,8 @@
 <%= render "shared/header"%>
 <div class="main-index">
   <div class="main-task">
-    <h1>タスク変更</h1>
+    <div class="form-task">
+    <h1>タスク編集</h1>
     <%= form_with(model: @task, local: true) do |form| %>
 
       <div class="title-area">
@@ -31,5 +32,6 @@
       </div>
       <%= form.submit "保存" %>
     <% end %>
+    </div>
   </div>
 </div>
