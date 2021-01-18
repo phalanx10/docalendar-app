@@ -6,7 +6,7 @@ Basic認証: ユーザー名: admin
           パスワード: 2222
           
 ## ログインについて
-新規登録していただくかログイン画面のlog in for testuserよりテストユーザーとしてログインしてください。
+新規登録していただくかログイン画面のLog in for Testuserよりテストユーザーとしてログインしてください。
 
 [![Image from Gyazo](https://i.gyazo.com/68229f6d8e405b21882acb095615b72f.png)](https://gyazo.com/68229f6d8e405b21882acb095615b72f)
 
